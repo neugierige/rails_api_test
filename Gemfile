@@ -21,6 +21,12 @@ group :development, :test do
   gem 'byebug'
 end
 
+group :test do
+	gem "rspec-rails", "~> 2.14"
+  gem "factory_girl_rails"
+  gem 'ffaker'
+end
+
 group :development do
   gem 'sqlite3'
 end
