@@ -7,7 +7,7 @@ describe ApiConstraints do
 	describe "matches?" do
 
 		it "returns true when the version matches the 'Accept' header" do
-			request = double(host: 'api.railstest.dev', headers: {"Accept" => "application/vnd.railsapitest.v1"})
+			request = double(host: 'api.railsapitest.dev', headers: {"Accept" => "application/vnd.railsapitest.v1"})
 			api_constraints_v1.matches?(request).should be_true
 		end	
 
