@@ -16,12 +16,24 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #Api gems
 gem 'active_model_serializers'
 
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
-end
+
 
 group :development do
   gem 'sqlite3'
 end
+
+group :test do
+	gem "rspec-rails", "~> 2.14"
+  gem "shoulda-matchers"
+end
+
+group :development, :test do
+  gem "factory_girl_rails"
+  gem 'ffaker'
+end
+
+gem "devise"
+
+
+
 
