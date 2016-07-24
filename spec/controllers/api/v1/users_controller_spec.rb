@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'pry'
 
 describe Api::V1::UsersController do
 	# before(:each) { request.headers['Accept'] = "application/vnd.railsapitest.v1"}
@@ -10,14 +11,14 @@ describe Api::V1::UsersController do
 		end
 
 		it "returns the information about a reporter on a hash" do
-			user_response = JSON.parse(response.body, symbolize_name: true)
+			
+			user_response = JSON.parse(response.body, symbolize_names: true)
 			expect(user_response[:email]).to eql @user.email
 		end
 
 		it { should respond_with 200 }
+		# it { should match (expect(response.status).to eq(200)) }
 	end
-
-
 
 
 end
